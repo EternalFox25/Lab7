@@ -2,12 +2,13 @@ package people;
 
 abstract public class Persona {
 
+	//DECLARAMOS PARAMETROS
 	private String name;
 	private int age;
 	private String address;
 
 	/**
-	 * 
+	 * DECLARAMOS CONSTRUCTORES
 	 * @param name
 	 * @param age
 	 * @param address
@@ -19,7 +20,6 @@ abstract public class Persona {
 	}
 
 	/**
-	 * 
 	 * @param name
 	 * @param age
 	 */
@@ -27,8 +27,10 @@ abstract public class Persona {
 		this.name = name;
 		this.age = age;
 	}
+
+
 	/**
-	 * 
+	 * DECLARAMOS GET Y SET
 	 * @param name
 	 */
 	public String getName() {
@@ -39,7 +41,6 @@ abstract public class Persona {
 	}
 
 	/**
-	 * 
 	 * @param age
 	 */
 	public int getAge() {
@@ -51,7 +52,6 @@ abstract public class Persona {
 	}
 
 	/**
-	 * 
 	 * @param address
 	 */
 	public String getAddress() {
@@ -62,8 +62,9 @@ abstract public class Persona {
 		this.address = address;
 	}
 
-	public String presentarse() {
-		return "Hola! Soy " + name;
-	}
-
-}
+	//DECLARAMOS LOS METODOS
+	public String presentarse(){//metodo no abstracto dentro de una clase abstracta
+		return "Hola! soy" + name;
+	}//end presentarse
+	public abstract int pagaImpuestos();//metodo abstracto dentro de una clase abstracta
+}//end Persona
